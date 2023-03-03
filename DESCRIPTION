@@ -5,7 +5,7 @@ Authors@R: c(
     person("Robinson", "Amanyiraho", , "amanyiraho@gmail.com", role = c("cre", "aut",  "cph"),
            comment = c(ORCID = "0000-0002-7747-1367"))
   )
-Description: Population estimates from offical UBOS webiste
+Description: Population estimates from official UBOS website.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -15,3 +15,6 @@ URL: https://github.com/amanyiraho/UBOSpopulation
 BugReports: https://github.com/amanyiraho/UBOSpopulation/issues
 Depends: 
     R (>= 2.10)
+Suggests: 
+    spelling
+Language: en-US
