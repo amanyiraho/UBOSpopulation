@@ -3,8 +3,6 @@
 download.file(url = "https://www.ubos.org/wp-content/uploads/statistics/Revised_Subcounty_population_2015_2030_146_Districts.xlsx",
               destfile = "./data-raw/population_2015_2030_146_Districts.xlsx")
 
-download.file(url = "https://www.ubos.org/wp-content/uploads/statistics/Revised_Subcounty_population_2015_2030_146_Districts.xlsx",
-              destfile = "./data-raw/population_2015_2030_146_Districts.csv")
 
 library(readxl)
 library(readr)
@@ -31,5 +29,7 @@ for (year in years) {
 df <- read_xlsx("data-raw/population_2015_2030_146_Districts.xlsx",
                 col_names = column_names,
                 skip = 2)
+
+ddf<- tidyr::fill(df, district_city,.direction = "down")
 
 usethis::use_data(national, overwrite = TRUE)
